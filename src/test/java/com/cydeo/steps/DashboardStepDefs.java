@@ -68,7 +68,7 @@ public class DashboardStepDefs
         String expectedBorrowedBookNumbers= DB_Util.getFirstRowFirstColumn();
         System.out.println("expectedBorrowedBookNumbers = " + expectedBorrowedBookNumbers);
 
-        Assert.assertEquals(actualBorrowedBookNumbers,"123");
+        Assert.assertEquals(actualBorrowedBookNumbers,expectedBorrowedBookNumbers);
 
         //close connection
         //DB_Util.destroy(); connection will be closed  by @db hooks
