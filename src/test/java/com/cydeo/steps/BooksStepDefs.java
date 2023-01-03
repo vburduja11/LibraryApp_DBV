@@ -23,6 +23,7 @@ public class BooksStepDefs {
 
     @When("the user gets all book categories in webpage")
     public void the_user_gets_all_book_categories_in_webpage() {
+        //potential wait here if tests fail
         actualCategoryList=BrowserUtil.getAllSelectOptions(bookPage.mainCategoryElement);
         actualCategoryList.remove(0);
         System.out.println("actualCategoryList = " + actualCategoryList);
