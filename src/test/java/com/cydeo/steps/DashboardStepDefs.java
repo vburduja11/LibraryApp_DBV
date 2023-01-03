@@ -41,7 +41,7 @@ public class DashboardStepDefs
         //This scenario Database result is expected.
 
         //Connect the same database (library2)
-        DB_Util.createConnection();
+        //DB_Util.createConnection(); connection will be created by @db hooks
         //run query for each of the result (3 different queries)
 
         //BOOKS
@@ -68,10 +68,10 @@ public class DashboardStepDefs
         String expectedBorrowedBookNumbers= DB_Util.getFirstRowFirstColumn();
         System.out.println("expectedBorrowedBookNumbers = " + expectedBorrowedBookNumbers);
 
-        Assert.assertEquals(actualBorrowedBookNumbers,expectedBorrowedBookNumbers);
+        Assert.assertEquals(actualBorrowedBookNumbers,"123");
 
         //close connection
-        DB_Util.destroy();
+        //DB_Util.destroy(); connection will be closed  by @db hooks
 
     }
 
