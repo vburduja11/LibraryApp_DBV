@@ -1,5 +1,5 @@
 Feature: Login Functionality
-  @wip
+  @wip @db
   Scenario: Login with valid credentials
     Given the user logged in  "librarian55@library" and "67UQi3Ol"
     When user gets username  from user fields
