@@ -28,7 +28,7 @@ public class UsersPage extends BasePage {
     private WebElement userCount;
 
     @FindBy(xpath = "//select[@name='tbl_users_length']\n")
-    public WebElement NumberOfUserDropdown;
+    private WebElement NumberOfUserDropdown;
 
 
     public WebElement editUser(String email) {
