@@ -24,6 +24,7 @@ public class LoginStepDefs {
     }
     @When("user gets username  from user fields")
     public void user_gets_username_from_user_fields() {
+        BrowserUtil.waitFor(2);
          actualUserName = dashBoardPage.accountHolderName.getText();
         System.out.println("actualUserName = " + actualUserName);
 
